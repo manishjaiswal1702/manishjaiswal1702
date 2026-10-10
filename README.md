@@ -1,11 +1,7 @@
 <div align="center">
 
-  <!-- Terminal Profile Banner with Dithered Pixel-Art Portrait -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-    <img alt="Manish Kumar Jaiswal — Full Stack Developer | AI & Cloud Engineer" src="assets/banner-dark.svg" width="100%" />
-  </picture>
+  <!-- Animated Terminal Profile Banner with Real Photograph -->
+  <img alt="Manish Kumar Jaiswal — Full Stack Developer | AI & Cloud Engineer" src="assets/banner.gif" width="100%" />
 
   <br/><br/>
 
