@@ -1,8 +1,15 @@
 <div align="center">
 
-  # ⚡ Manish Kumar Jaiswal
-  ### Full Stack Developer &bull; AI & Cloud Engineer &bull; Competitive Programmer
+  <!-- Terminal Profile Banner with Dithered Pixel-Art Portrait -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+    <img alt="Manish Kumar Jaiswal — Full Stack Developer | AI & Cloud Engineer" src="assets/banner-dark.svg" width="100%" />
+  </picture>
 
+  <br/><br/>
+
+  <!-- Animated Typing Status -->
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=00F0FF&center=true&vCenter=true&multiline=true&width=680&height=85&lines=Full+Stack+Developer+%7C+MERN+%26+Microservices;AI+%26+GenAI+Enthusiast+(LangChain%2C+LangGraph%2C+RAG);AWS+Certified+Cloud+Practitioner+%E2%98%81%EF%B8%8F;B.Tech+CSE+(AI)+%40+KIET+Group+of+Institutions+'27" alt="Typing SVG" />
   </a>

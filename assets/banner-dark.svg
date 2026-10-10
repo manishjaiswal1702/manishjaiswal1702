@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 320" width="850" height="320" fill="none">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="50%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#121622"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="cyan-violet-text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#00F5D4"/>
+    </linearGradient>
+
+    <linearGradient id="border-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#00F5D4"/>
+    </linearGradient>
+
+    <linearGradient id="card-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#30363D"/>
+      <stop offset="100%" stop-color="#1F242C"/>
+    </linearGradient>
+
+    <!-- Avatar clip -->
+    <clipPath id="avatar-clip">
+      <rect x="42" y="72" width="186" height="186" rx="14" ry="14"/>
+    </clipPath>
+
+    <!-- Filter for Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 0.4; }
+    }
+    @keyframes cursor-blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    @keyframes border-glow-anim {
+      0%, 100% { stroke-opacity: 0.8; }
+      50% { stroke-opacity: 0.3; }
+    }
+    .cursor { animation: cursor-blink 1.1s infinite; }
+    .status-dot { animation: pulse 2s infinite ease-in-out; }
+    .portrait-border { animation: border-glow-anim 4s infinite ease-in-out; }
+    .font-mono { font-family: 'Fira Code', 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
+  </style>
+
+  <!-- Banner Outer Card -->
+  <rect x="1" y="1" width="848" height="318" rx="16" fill="url(#bg-grad)" stroke="url(#card-stroke)" stroke-width="1.5"/>
+
+  <!-- Background Cyber Glows -->
+  <circle cx="90" cy="80" r="140" fill="#00F0FF" opacity="0.04" filter="url(#glow)"/>
+  <circle cx="750" cy="240" r="160" fill="#A855F7" opacity="0.05" filter="url(#glow)"/>
+  <circle cx="480" cy="60" r="120" fill="#00F5D4" opacity="0.03" filter="url(#glow)"/>
+
+  <!-- Terminal Window Header Bar -->
+  <rect x="1" y="1" width="848" height="42" rx="16" fill="#161B22" fill-opacity="0.6"/>
+  <rect x="1" y="24" width="848" height="18" fill="#161B22" fill-opacity="0.6"/>
+  <line x1="1" y1="42" x2="849" y2="42" stroke="#30363D" stroke-width="1"/>
+
+  <!-- Window Buttons -->
+  <circle cx="28" cy="21" r="5.5" fill="#FF5F56"/>
+  <circle cx="46" cy="21" r="5.5" fill="#FFBD2E"/>
+  <circle cx="64" cy="21" r="5.5" fill="#27C93F"/>
+
+  <!-- Terminal Title -->
+  <text x="425" y="26" text-anchor="middle" fill="#8B949E" font-size="12" class="font-mono" letter-spacing="0.5">
+    manishjaiswal1702@kiet-ai:~ $ ./portfolio-init.sh --profile
+  </text>
+
+  <!-- LEFT: Pixel Portrait Section -->
+  <!-- Ambient glow behind portrait -->
+  <rect x="36" y="66" width="198" height="198" rx="18" fill="url(#border-glow)" opacity="0.15" filter="url(#subtle-glow)"/>
+  
+  <!-- Outer glowing border -->
+  <rect class="portrait-border" x="39" y="69" width="192" height="192" rx="16" fill="#0A0E17" stroke="url(#border-glow)" stroke-width="2"/>
+
+  <!-- Corner HUD Accents -->
+  <path d="M 36 82 L 36 66 L 52 66" stroke="#00F0FF" stroke-width="2.5" fill="none"/>
+  <path d="M 218 66 L 234 66 L 234 82" stroke="#00F0FF" stroke-width="2.5" fill="none"/>
+  <path d="M 36 248 L 36 264 L 52 264" stroke="#A855F7" stroke-width="2.5" fill="none"/>
+  <path d="M 218 264 L 234 264 L 234 248" stroke="#A855F7" stroke-width="2.5" fill="none"/>
+
+  <!-- Dithered / Pixel-Art Portrait Image -->
+  <image href="data:image/png;base64,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" x="42" y="72" width="186" height="186" clip-path="url(#avatar-clip)" preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- Cyber scanline overlay on portrait -->
+  <line x1="42" y1="72" x2="228" y2="72" stroke="#00F0FF" stroke-width="1" opacity="0.4"/>
+  <line x1="42" y1="258" x2="228" y2="258" stroke="#00F5D4" stroke-width="1" opacity="0.4"/>
+
+  <!-- Status pill under portrait -->
+  <rect x="44" y="274" width="182" height="26" rx="13" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <circle cx="58" cy="287" r="4.5" fill="#00F5D4" class="status-dot"/>
+  <text x="70" y="291" fill="#E6EDF3" font-size="10.5" font-weight="600" class="font-mono" letter-spacing="0.5">READY TO DEPLOY</text>
+  <text x="180" y="291" fill="#8B949E" font-size="10" class="font-mono">⚡ '27</text>
+
+  <!-- RIGHT: Profile Details Section -->
+  <!-- Name -->
+  <text x="268" y="98" fill="url(#cyan-violet-text)" font-size="28" font-weight="800" class="font-sans" letter-spacing="-0.5">
+    Manish Kumar Jaiswal
+  </text>
+
+  <!-- Role Badge Container -->
+  <rect x="268" y="112" width="375" height="26" rx="6" fill="#1F1A2F" stroke="#A855F7" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="278" y="129" fill="#C084FC" font-size="12" font-weight="600" class="font-mono">
+    ⚡ Full Stack Developer &bull; AI &amp; Cloud Engineer
+  </text>
+
+  <!-- Education Line -->
+  <g transform="translate(268, 154)">
+    <circle cx="6" cy="6" r="3" fill="#00F0FF"/>
+    <text x="18" y="10" fill="#E6EDF3" font-size="13" font-weight="600" class="font-sans">
+      B.Tech CSE (AI) &bull; KIET Group of Institutions
+    </text>
+    <rect x="340" y="-3" width="70" height="20" rx="10" fill="#162A2B" stroke="#00F5D4" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="375" y="11" fill="#00F5D4" font-size="11" font-weight="700" text-anchor="middle" class="font-mono">2027</text>
+  </g>
+
+  <!-- Tech Stack Terminal Block -->
+  <g transform="translate(268, 182)">
+    <rect x="0" y="0" width="545" height="54" rx="8" fill="#111622" stroke="#262C3A" stroke-width="1"/>
+    <text x="14" y="22" fill="#8B949E" font-size="11" font-weight="600" class="font-mono">
+      <tspan fill="#00F0FF">&gt; CORE_STACK:</tspan>
+    </text>
+
+    <!-- Capsule Badges for Core Stack -->
+    <!-- MERN Stack -->
+    <rect x="112" y="9" width="86" height="20" rx="4" fill="#161B22" stroke="#30363D"/>
+    <text x="155" y="23" fill="#61DAFB" font-size="10.5" font-weight="600" text-anchor="middle" class="font-mono">MERN Stack</text>
+
+    <!-- LangChain -->
+    <rect x="204" y="9" width="78" height="20" rx="4" fill="#161B22" stroke="#30363D"/>
+    <text x="243" y="23" fill="#00F5D4" font-size="10.5" font-weight="600" text-anchor="middle" class="font-mono">LangChain</text>
+
+    <!-- LangGraph -->
+    <rect x="288" y="9" width="80" height="20" rx="4" fill="#161B22" stroke="#30363D"/>
+    <text x="328" y="23" fill="#A855F7" font-size="10.5" font-weight="600" text-anchor="middle" class="font-mono">LangGraph</text>
+
+    <!-- Kubernetes -->
+    <rect x="374" y="9" width="84" height="20" rx="4" fill="#161B22" stroke="#30363D"/>
+    <text x="416" y="23" fill="#326CE5" font-size="10.5" font-weight="600" text-anchor="middle" class="font-mono">Kubernetes</text>
+
+    <!-- AWS -->
+    <rect x="464" y="9" width="50" height="20" rx="4" fill="#161B22" stroke="#30363D"/>
+    <text x="489" y="23" fill="#FF9900" font-size="10.5" font-weight="700" text-anchor="middle" class="font-mono">AWS</text>
+
+    <!-- Subtext inside block -->
+    <text x="14" y="42" fill="#8B949E" font-size="11" class="font-mono">
+      <tspan fill="#00F5D4">&gt; ARCH:</tspan> Microservices &bull; Distributed Sandboxes &bull; RAG Agents<tspan class="cursor" fill="#00F0FF">_</tspan>
+    </text>
+  </g>
+
+  <!-- Certification Badge Container -->
+  <g transform="translate(268, 252)">
+    <rect x="0" y="0" width="370" height="34" rx="8" fill="#15241C" stroke="#10B981" stroke-opacity="0.5" stroke-width="1.2"/>
+    <!-- Shield / Cloud Icon -->
+    <path d="M 18 17 L 24 11 L 30 17 L 24 23 Z" fill="#00F5D4"/>
+    <text x="38" y="22" fill="#E6EDF3" font-size="12.5" font-weight="700" class="font-sans">
+      ☁️ AWS Certified Cloud Practitioner
+    </text>
+    <rect x="290" y="7" width="68" height="20" rx="10" fill="#10B981" fill-opacity="0.2"/>
+    <text x="324" y="21" fill="#34D399" font-size="10" font-weight="700" text-anchor="middle" class="font-mono">VERIFIED</text>
+  </g>
+
+  <!-- LeetCode/DSA Stat Badge -->
+  <g transform="translate(650, 252)">
+    <rect x="0" y="0" width="163" height="34" rx="8" fill="#1F1C16" stroke="#FFA116" stroke-opacity="0.4" stroke-width="1.2"/>
+    <text x="14" y="22" fill="#FFA116" font-size="12" font-weight="700" class="font-mono">
+      320+ DSA Solved
+    </text>
+  </g>
+</svg>
